@@ -21,6 +21,7 @@ import { useState } from "react";
 import { Card } from "antd";
 import "../styles/homeStyles.css";
 import img from "../images/Navicon.png"
+import Consult from "../components/Consult";
 const { Meta } = Card;
 const { Footer, Content } = Layout;
 
@@ -40,7 +41,7 @@ const footerStyle = {
   backgroundImage: "linear-gradient(#facbda,white )",
 };
 
-const HomePage = () => {
+const Consults = () => {
   // const [openChatbot, setOpenChatbot] = useState(false);
 
   // const generateChat = () => {
@@ -58,7 +59,7 @@ const HomePage = () => {
         size={[0, 48]}
         className="space"
       >
-        <Content style={contentStyle} className="headerStyle">
+        {/* <Content style={contentStyle} className="headerStyle">
           <Row>
             <Col flex="1" className="contentt tagline">
               <Typography className="tagline firstLine">
@@ -110,7 +111,7 @@ const HomePage = () => {
                   to="/login"
                   style={{ textDecoration: "none", fontSize: "xx-large" }}
                 >
-                  {/* <i class="fa-solid fa-stethoscope">    Book Now</i> */}
+                  <i class="fa-solid fa-stethoscope">    Book Now</i>
                   Book Now
                 </Link>
               </Button>
@@ -126,14 +127,14 @@ const HomePage = () => {
             </Col>
           </Row>
           <div>
-      {/* <Chatbot /> */}
+      <Chatbot />
     
            
               
       
           </div>
 
-        </Content>
+        </Content> */}
 
         <div className="info">
           <div className="info-heading">
@@ -255,6 +256,7 @@ const HomePage = () => {
             </Card>
           </div>
         </div>
+        <Consult/>
                    
         <Footer style={footerStyle}>
           <Row gutter={16}>
@@ -313,4 +315,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Consults;

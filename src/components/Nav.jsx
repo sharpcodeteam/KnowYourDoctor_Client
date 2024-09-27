@@ -57,17 +57,14 @@ const Nav = () => {
                     <Link className='ColLink' to='/about'>About</Link>
                   </Col>
                   <Col  >
-                    <Link className='ColLink' to='/'>Consultants</Link>
-                  </Col>
-                  <Col>
-                    <Link className='ColLink' to='/'>Contact</Link>                 
+                    <Link className='ColLink' to='/consults'>Consultants</Link>
                   </Col>
 
                 </Col>
 
 
                 <Col id="Log" className="column button">
-                  <Col >
+                  {/* <Col >
                     <Button
                       style={{
                         margin: 6,
@@ -85,7 +82,7 @@ const Nav = () => {
                       {"  "}
                       Emergency
                     </Button>
-                  </Col>
+                  </Col> */}
                   <Col >
                     <Button
                       type="primary"

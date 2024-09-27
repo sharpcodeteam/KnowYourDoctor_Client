@@ -15,6 +15,7 @@ import RegisterPage from './pages/RegisterPage';
 import UserPage from './pages/UserPage';
 import ProfilePage from './pages/ProfilePage';
 import TeamPage from './pages/TeamPage';
+import Consults from './pages/Consults';
 
 
 function App() {
@@ -44,6 +45,9 @@ function App() {
           }/>
           <Route path='/about' element={
             <TeamPage/>
+          }/>
+          <Route path='/consults' element={
+            <Consults/>
           }/>
           <Route path='/myAppointment' 
           element={

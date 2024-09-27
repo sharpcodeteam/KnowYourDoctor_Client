@@ -1,175 +1,137 @@
-import React from 'react'
-import Nav from '../components/Nav'
+import { Layout, Space, Row, Col, Button } from "antd";
+import React from "react";
+import "../styles/HomePage.css";
+import '../App.css'
 
-import "../styles/teamPageStyles.css"
-import harsh from '../images/harsh.jpg'
-import asmit from '../images/asmit.jpeg'
-import sagar from '../images/sagar.jpeg'
-import sumit from '../images/sumit.jpeg'
-import shruti from '../images/shruti.jpeg'
-import naman from '../images/naman.jpeg'
-const TeamPage = () => {
+import Nav from "../components/Nav";
+
+// images
+import doctor from "../images/doctor.webp";
+import { Link } from "react-router-dom";
+
+import { Card } from "antd";
+import "../styles/homeStyles.css";
+import img from "../images/Navicon.png"
+import Consult from "../components/Consult";
+const { Meta } = Card;
+const { Footer, Content } = Layout;
+
+const contentStyle = {
+  textAlign: "center",
+  minHeight: "90vh",
+  lineHeight: "120px",
+  color: "#fff",
+  // backgroundImage: "linear-gradient(#FFF0F5,white )",
+};
+const footerStyle = {
+  textAlign: "center",
+  color: "#000000",
+  fontSize: "20px",
+  fontWeight: "bold",
+  backgroundColor: " #FFF0F5",
+  backgroundImage: "linear-gradient(#facbda,white )",
+};
+
+const HomePage = () => {
+  // const [openChatbot, setOpenChatbot] = useState(false);
+
+  // const generateChat = () => {
+  //   setOpenChatbot(true);
+  // }
   return (
     <>
+    <div >
+      {/* <Chatbot/> */}
+    </div>
+      <Nav />
+      <Space
+        direction="vertical"
+        style={{ position: "relative", top: "4rem", width: "100%", height:"80vh" }}
+        size={[0, 48]}
+        className="space"
+      >
+        <Content style={contentStyle} className="headerStyle">
+          <Row>
+            <Col flex="1" className=" about_tag">
+              <p>KnowYourDoctor is your go-to platform for finding the best healthcare professionals in your area. Easily search for doctors by specialty, location, and experience. Read patient reviews and ratings to make informed decisions about your healthcare.</p>
+            </Col>
 
-        <Nav/>
-        
-        <section>
-        
-      <div class="row1">
-        
-        
-        
-        <div class="column1">
-          <div class="card1">
-            <div class="img-container">
-              <img src={asmit} />
-            </div>
-            <h3>Asmit Raj</h3>
-            <p>Flutter Developer</p>
-            <div class="icons">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="http://www.linkedin.com/in/asmit-raj-266368241">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/Asmit2021">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="column1">
-          <div class="card1">
-            <div class="img-container">
-              <img src={harsh} />
-            </div>
-            <h3>Harsh Sonkar</h3>
-            <p>Developer</p>
-            <div class="icons">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/dynamicHarsh">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="mailto:harshkrsonkar@gmail.com">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="column1">
-          <div class="card1">
-            <div class="img-container">
-              <img src={naman} />
-            </div>
-            <h3>Naman Kulshreshth</h3>
-            <p>Web Developer</p>
-            <div class="icons">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/Nkpro29">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="column1">
-          <div class="card1">
-            <div class="img-container">
-              <img src={sagar} />
-            </div>
-            <h3>Sagar Guney</h3>
-            <p>Cloud Developer</p>
-            <div class="icons">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/sagar-guney-877614241">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/SagarG2003">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="mailto:sagarguney@gmail.com">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        
-        <div class="column1">
-          <div class="card1">
-            <div class="img-container">
-              <img src={shruti} />
-            </div>
-            <h3>Shruti Sharma</h3>
-            <p>Developer</p>
-            <div class="icons">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/shruti-sharma-5a8774217">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="column1">
-          <div class="card1">
-            <div class="img-container">
-              <img src={sumit} />
-            </div>
-            <h3>Sumit Sarkar</h3>
-            <p>AI / ML</p>
-            <div class="icons">
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/SumitSarkar969">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="#">
-                <i class="fas fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+            <Col flex="1" className="contentt image">
+              <img
+                src={doctor}
+                alt="error"
+                style={{ width: 632.25, height: 500, filter: 100, padding: 10 }}
+                className="doctorImage"
+              />
+            </Col>
+          </Row>
+          <div>
+      {/* <Chatbot /> */}
+    
+           
+              
       
-    </section>
-        
-        
-    </>
-  )
-}
+          </div>
 
-export default TeamPage
+        </Content>
+        <Consult/>
+
+                   
+        <Footer style={footerStyle}>
+          <Row gutter={16}>
+            <Col flex="1em" className="column logo">
+              <img style={{ position: "relative", height: "4.5em", padding: "0.5em 0.5em" }} src={img} alt="" />
+            </Col>
+
+            <Col className="gutter-row" span={5.33}></Col>
+            <Col className="gutter-row" span={6}></Col>
+          </Row>
+          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          <Row gutter={16}>
+            <Col className="gutter-row" span={6}>
+              <div style={{ marginBottom: "5%", lineHeight: "250%" }}>
+                <Row>About Us</Row>
+                <Row>Annual CheckUp</Row>
+                <Row>Blog</Row>
+
+              </div>
+            </Col>
+
+            <Col className="gutter-row" span={6}>
+              <div style={{ lineHeight: "250%" }}>
+                <Row>Get a Diagnosis</Row>
+                <Row>How it Works</Row>
+                <Row>Privacy Policy</Row>
+              </div>
+            </Col>
+
+            <Col className="gutter-row" span={6}>
+              <div style={{ lineHeight: "250%" }}>
+                <Row>Hospitals in India</Row>
+                <Row>International Patients</Row>
+                <Row>Medical Procedures</Row>
+              </div>
+            </Col>
+
+            <Col className="gutter-row" span={6}>
+              <div style={{ lineHeight: "250%" }}>
+                <Row>Contact Us</Row>
+                <Row>FAQ's</Row>
+                <Row>Careers</Row>
+              </div>
+            </Col>
+
+            <Col className="gutter-row" span={6}>
+              <div></div>
+            </Col>
+          </Row>
+          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          <div className="Row">All rights Reserved © Emmet 2023</div>
+        </Footer>
+      </Space>
+
+    </>
+  );
+};
+
+export default HomePage;
