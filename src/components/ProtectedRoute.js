@@ -12,7 +12,7 @@ export default function ProtectedRoute({children}){
   const getUser= async()=>{
     try{
       dispatch(showLoading());
-      const resp=await axios.post('user/getUserData')
+      const resp=await axios.post('https://knowyourdoctor-server.onrender.com/user/getUserData')
       dispatch(hideLoading());
       if(resp.data.success){
         dispatch(setUser(resp.data.data))
