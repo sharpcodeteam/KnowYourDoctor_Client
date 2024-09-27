@@ -14,7 +14,9 @@ export default function ProtectedRoute({children}){
       dispatch(showLoading());
       const resp=await axios.post('https://knowyourdoctor-server.onrender.com/user/getUserData')
       dispatch(hideLoading());
+      console.log(resp)
       if(resp.data.success){
+        console.log("HIi fron adkf;alkdsfd;salkfj;alskdjf;aksldjf;akj")
         dispatch(setUser(resp.data.data))
 
       }
