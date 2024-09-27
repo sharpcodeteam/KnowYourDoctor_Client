@@ -11,12 +11,13 @@ export default function ProtectedRoute({children}){
 
   const getUser= async()=>{
     try{
+      const token = localStorage.getItem('Token');
       dispatch(showLoading());
-      const resp=await axios.post('https://knowyourdoctor-server.onrender.com/user/getUserData',{
+      const resp=await axios.post('http://localhost:8080/user/getUserData',{"token":token},{
         withCredentials: true,
       })
       dispatch(hideLoading());
-      console.log(resp)
+      console.log("our response is : ",resp.data)
       if(resp.data.success){
         console.log("HIi fron adkf;alkdsfd;salkfj;alskdjf;aksldjf;akj")
         dispatch(setUser(resp.data.data))

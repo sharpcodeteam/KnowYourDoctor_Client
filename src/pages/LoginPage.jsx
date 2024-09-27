@@ -14,7 +14,7 @@ const LoginPage = () => {
     try {
       dispatch(showLoading());
       console.log(values);
-      const res = await axios.post('https://knowyourdoctor-server.onrender.com/user/login', values,{
+      const res = await axios.post('http://localhost:8080/user/login', values,{
         withCredentials: true,
       });
       dispatch(hideLoading());
