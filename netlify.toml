@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/gamingHub.html"
+  status = 200
