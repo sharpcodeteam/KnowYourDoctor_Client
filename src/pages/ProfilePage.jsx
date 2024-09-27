@@ -14,7 +14,9 @@ const ProfilePage = () => {
     
     try {
       console.log(values);
-      const res = await axios.post('https://knowyourdoctor-server.onrender.com/user/profile',{_id: user.id,values});
+      const res = await axios.post('https://knowyourdoctor-server.onrender.com/user/profile',{_id: user.id,values},{
+        withCredentials: true,
+      });
       if (res.data.success) {
         
         message.success("Details Updated Successfully!");

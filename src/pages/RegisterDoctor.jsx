@@ -19,7 +19,9 @@ const RegisterDoctor = () => {
     const handleFinish=async (values)=>{
         try{
             dispatch(showLoading());
-            const res=await axios.post('https://knowyourdoctor-server.onrender.com/user/addDoctor',values);
+            const res=await axios.post('https://knowyourdoctor-server.onrender.com/user/addDoctor',values,{
+                withCredentials: true,
+              });
             
             if(res.data.success){
                 

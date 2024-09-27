@@ -14,9 +14,12 @@ const LoginPage = () => {
     try {
       dispatch(showLoading());
       console.log(values);
-      const res = await axios.post('https://knowyourdoctor-server.onrender.com/user/login', values);
-      console.log(res);
+      const res = await axios.post('https://knowyourdoctor-server.onrender.com/user/login', values,{
+        withCredentials: true,
+      });
       dispatch(hideLoading());
+      localStorage.setItem('Token', res.data.token);
+      console.log("login result data : ",res.data.token);
       if (res.data.success) {
         sessionStorage.setItem('token', res.data.token);
         message.success('Logged In Successfully');

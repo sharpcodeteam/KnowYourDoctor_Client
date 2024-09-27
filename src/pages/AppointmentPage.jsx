@@ -27,7 +27,9 @@ const AppointmentPage = () => {
     const getAppointment= async ()=>{
         try{
         
-         const res= await axios.post('https://knowyourdoctor-server.onrender.com/user/appointments',user);
+         const res= await axios.post('https://knowyourdoctor-server.onrender.com/user/appointments',user,{
+          withCredentials: true,
+        });
          if(res.data.success){
           const upadatedRes=res.data.app.map(({
             _id: key,

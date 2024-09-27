@@ -12,7 +12,9 @@ export default function ProtectedRoute({children}){
   const getUser= async()=>{
     try{
       dispatch(showLoading());
-      const resp=await axios.post('https://knowyourdoctor-server.onrender.com/user/getUserData')
+      const resp=await axios.post('https://knowyourdoctor-server.onrender.com/user/getUserData',{
+        withCredentials: true,
+      })
       dispatch(hideLoading());
       console.log(resp)
       if(resp.data.success){
@@ -22,6 +24,7 @@ export default function ProtectedRoute({children}){
       }
       else{
         <Navigate to='/login'/>
+        console.log("kadfkljadsblfjkabs;djfuohpasdfjknabljksdfbp")
         sessionStorage.clear();
         Cookies.remove('login')
       }

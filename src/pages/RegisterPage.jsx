@@ -37,7 +37,9 @@ const RegisterPage = () => {
     const onFinishHandler = async (values) => {
         try {
             dispatch(showLoading());
-            const res = await axios.post('https://knowyourdoctor-server.onrender.com/user/register', values);
+            const res = await axios.post('https://knowyourdoctor-server.onrender.com/user/register', values,{
+                withCredentials: true,
+              });
             dispatch(hideLoading());
             if (res.data.success) {
                 message.success('Registered Successfully');
