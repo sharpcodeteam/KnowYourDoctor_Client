@@ -21,6 +21,8 @@ const LoginPage = () => {
         sessionStorage.setItem('token', res.data.token);
         message.success('Logged In Successfully');
         navigate('/home');
+        console.log("we are navigating to /home page")
+
 
       }
       else {
