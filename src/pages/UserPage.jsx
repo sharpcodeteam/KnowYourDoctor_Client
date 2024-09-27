@@ -17,7 +17,7 @@ const UserPage = () => {
   );
   const getUsers=async ()=>{
     try{
-      const res=await axios.get('/user/getUsers');
+      const res=await axios.get('https://knowyourdoctor-server.onrender.com/user/getUsers');
       if(res.data.success){
         
         setUsers(res.data.users);

@@ -17,7 +17,7 @@ const DoctorPage = () => {
 
   const getDoctors=async ()=>{
     try{
-      const res=await axios.get('/user/getDoctors');
+      const res=await axios.get('https://knowyourdoctor-server.onrender.com/user/getDoctors');
       if(res.data.success){
         
         setDoctors(res.data.doctors);

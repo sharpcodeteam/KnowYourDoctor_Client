@@ -10,7 +10,7 @@ const HomePage = () => {
   const { user } = useSelector(state => state.user)
   const getUserData = async () => {
     try {
-      await axios.post('/user/getUserData');
+      await axios.post('https://knowyourdoctor-server.onrender.com/user/getUserData');
     }
     catch (err) {
       console.log(err);

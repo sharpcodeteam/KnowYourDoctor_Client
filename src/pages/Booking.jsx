@@ -22,7 +22,7 @@ const Booking = () => {
           dispatch(showLoading());
           
           const data={speciality: values.speciality,concern: values.concern,patientId: user.id,patientName: user.name,date: values.advDate};
-          const res=await axios.post('/user/book',data)
+          const res=await axios.post('https://knowyourdoctor-server.onrender.com/user/book',data)
           if(res.data.success){
             dispatch(hideLoading())
             message.success(res.data.message)
