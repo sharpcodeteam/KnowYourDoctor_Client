@@ -13,7 +13,7 @@ export default function ProtectedRoute({children}){
     try{
       const token = localStorage.getItem('Token');
       dispatch(showLoading());
-      const resp=await axios.post('http://localhost:8080/user/getUserData',{"token":token},{
+      const resp=await axios.post('https://knowyourdoctor-server.onrender.com/user/getUserData',{"token":token},{
         withCredentials: true,
       })
       dispatch(hideLoading());
