@@ -100,7 +100,7 @@ const RegisterDoctor = () => {
         </Col>
         
     </Row>
-    <h6 className='text-light'>Upload Image for Face Recognition</h6>
+    {/* <h6 className='text-light'>Upload Image for Face Recognition</h6>
     {selectedImage && (
         <div>
           <img
@@ -111,7 +111,7 @@ const RegisterDoctor = () => {
           <br />
           <button className='btn btn-danger' onClick={() => setSelectedImage(null)}>Remove</button>
         </div>
-      )}
+      )} */}
       
     <Row>
     <Col xs={24} md={24} lg={8}>
