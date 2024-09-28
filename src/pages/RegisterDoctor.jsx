@@ -113,7 +113,7 @@ const RegisterDoctor = () => {
         </div>
       )} */}
       
-    <Row>
+    {/* <Row>
     <Col xs={24} md={24} lg={8}>
         <Form.Item name="img" required rules={[{required: true}]}>
         <input
@@ -125,7 +125,7 @@ const RegisterDoctor = () => {
       />
             </Form.Item>
         </Col>
-    </Row>
+    </Row> */}
     <div className="d-flex justify-content-center">
         <button className='btn btn-primary' type='submit'>Register</button>
     </div>
