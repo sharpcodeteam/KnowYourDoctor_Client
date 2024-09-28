@@ -25,8 +25,8 @@ const RegisterDoctor = () => {
             
             if(res.data.success){
                 
-                const imageRef=ref(storage,`image/${res.data.id}`);
-                await uploadBytes(imageRef,selectedImage)
+                // const imageRef=ref(storage,`image/${res.data.id}`);
+                // await uploadBytes(imageRef,selectedImage)
                 dispatch(hideLoading())
                 message.success('Doctor Registered Successfully')
             }
